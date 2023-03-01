@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 250px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.goods_laptop.active,
+.goods_videocard.active,
+.goods_car.active {
+    display: block;
+}
+.macbook-air.active1,
+.macbook-pro.active1,
+.goods_laptop.active1,
+.goods_videocard.active1,
+.goods_car.active1,
+.macbook-air.active1,
+.intelcori3.active1,
+.intelcori5.active1,
+.nissan-aria.active1,
+.audi-q7.active1 {
+    display: block;
+}
+
+.macbook-air,
+.macbook-pro,
+.goods_laptop,
+.goods_videocard,
+.goods_car,
+.macbook-air,
+.intelcori3,
+.intelcori5,
+.nissan-aria,
+.audi-q7  {
+    display: none;
+}
+.modal {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: lightblue;
+}
+.modal-button {
+    display: flex;
+     margin-inline: auto;
+     background-color: lavender;
+     border: none;
+     border-radius: 10px;
+}
+.modal-overlay {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+.d-none {
+    display: none;
+}
+.goods_item:hover, 
+.list_item:hover {
+ color: red;
+ cursor: pointer;
+}
+button {
+    padding: 5px 20px;
+}
+button:hover {
+    cursor: pointer;
+}
+#laptop.active,
+#videocard.active,
+#car.active,
+#macbook-air.active1,
+#macbook-pro.active1,
+#intelcori3.active1,
+#intelcori5.active1,
+#nissan-aria.active1,
+#audi-q7.active1 {
+    color: forestgreen;
+}
