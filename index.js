@@ -200,7 +200,7 @@ form.addEventListener('submit', (e) => {
         <p>Nova Poshta Storage:${form.elements.NovaPoshta.value}</p>
         <p>Payment:${form.elements.radioCash.checked ? 'Cash' : 'Bank card'}</p>
         <p>Amount:${form.elements.amount.value}</p>
-        <p>Your comment:${form.elements.comment.value}</p>
+        <p>${form.elements.comment.value !== '' ? `Your comment:${form.elements.comment.value}` : ''}</p>
         `;
         
 
