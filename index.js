@@ -32,6 +32,10 @@ ulGoods.addEventListener('click', classAdd1);
 ulDescription.addEventListener('click', classRemove);
 // closeModal.addEventListener('click', modalToggleClass);
 
+
+let description = '';
+
+
 function classAdd(event) {
     if (event.target.tagName === 'P') {
         const activeEl = document.querySelector('.active');
@@ -57,17 +61,23 @@ function classAdd1(event) {
         }
         if (event.target.id === 'macbook-air') {
             macbookAirDescription.classList.add('active1');
+            description = macbookAirDescription.querySelector('div').innerHTML;
         }
         else if (event.target.id === 'macbook-pro') {
             macbookProDescription.classList.add('active1');
+            description = macbookProDescription.querySelector('div').innerHTML;
         } else if (event.target.id === 'intelcori3') {
             intelcorei3Description.classList.add('active1');
+            description = intelcorei3Description.querySelector('div').innerHTML;
         } else if (event.target.id === 'intelcori5') {
             intelcorei5Description.classList.add('active1');
+            description = intelcorei5Description.querySelector('div').innerHTML;
         } else if (event.target.id === 'nissan-aria') {
             nissanAriaDescription.classList.add('active1');
+            description = nissanAriaDescription.querySelector('div').innerHTML;
         } else if (event.target.id === 'audi-q7') {
             audiQ7greyDescription.classList.add('active1');
+            description = audiQ7greyDescription.querySelector('div').innerHTML;
         }
     }
 }
@@ -184,6 +194,7 @@ form.addEventListener('submit', (e) => {
         secondModalBodyEl = document.querySelector('.second-modal-body');
 
         secondModalBodyEl.innerHTML =  `
+        <p>${description}</p>
         <p>Name:${form.elements.name.value}</p>
         <p>City:${form.elements.city.value}</p>
         <p>Nova Poshta Storage:${form.elements.NovaPoshta.value}</p>
